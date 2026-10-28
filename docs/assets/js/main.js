@@ -1,3 +1,11 @@
+/*
+  File: main.js
+  Project: General HVAC LLC | Faro redesign concept
+  Created: 10.27.2026
+  Updated: 10.27.2026
+  Author: Faro Digital Studio
+  Revision: Guard optional scroll-to-top element so removing it cannot stop initialization.
+*/
 /**
 * Template Name: Constructify
 * Template URL: https://bootstrapmade.com/constructify-bootstrap-construction-website-template/
@@ -80,7 +88,7 @@
       window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
     }
   }
-  scrollTop.addEventListener('click', (e) => {
+  if (scrollTop) scrollTop.addEventListener('click', (e) => {
     e.preventDefault();
     window.scrollTo({
       top: 0,

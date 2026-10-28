@@ -12,7 +12,7 @@
 
   Deployment: Place this file beside the original template's assets/ directory.
   CSS and JS remain assets/css/main.css and assets/js/main.js.
-  Revision: Logo sizing reconciled; three responsive photo slots installed.
+  Revision: Reverted baseline; guarded scroll handler, visible hero, responsive footer and specialties.
   Photography: Supply the files listed below; image files are not bundled.
   assets/img/hvac-hero.jpg — wide, subject toward the right
   assets/img/hvac-faq.jpg — portrait or square
@@ -39,7 +39,7 @@
   <title>AC Repair &amp; HVAC Services in Harlingen, TX | General HVAC LLC</title>
   <meta name="description" content="General HVAC LLC serves Harlingen and the Rio Grande Valley with residential and commercial AC repair, installation and maintenance. Available 24/7. No overtime fees.">
   <meta name="author" content="Faro Digital Studio">
-  <meta name="robots" content="noindex, nofollow">
+  <meta name="robots" content="noindex, nofollow, noimageindex, nosnippet">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="General HVAC LLC">
@@ -62,7 +62,7 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
-  <link href="assets/css/main.css?v=20261027-photos1" rel="stylesheet">
+  <link href="assets/css/main.css?v=20261027-repair3" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Constructify
@@ -133,7 +133,7 @@
         <img src="assets/img/hvac-hero.jpg" alt="" width="1920" height="1080" fetchpriority="high" decoding="async" onerror="this.hidden=true">
       </div>
       <div class="container position-relative">
-        <div class="row"><div class="col-lg-7" data-aos="fade-up">
+        <div class="row"><div class="col-lg-7">
           <span class="badge-label"><i class="bi bi-geo-alt" aria-hidden="true"></i> Harlingen &amp; the Rio Grande Valley</span>
           <h1 id="hero-title">Harlingen AC &amp; heating.<br><span class="accent">Comfort, around the clock.</span></h1>
           <p class="lead">Whether it’s an <strong class="accent">unexpected breakdown</strong> or time for a <strong class="accent">new system</strong>, keep your home or business comfortable with expert service and installation.</p>
@@ -182,21 +182,21 @@
           <div class="service-body"><h3 class="h4">Ductless &amp; Zoning</h3><p>Flexible heating and cooling options for spaces with different comfort needs.</p></div>
         </article></div>
       </div>
-        <div class="service-specialties mt-4 p-4 bg-white rounded-3">
-          <h3 class="h5 mb-4">More ways to keep your space comfortable</h3>
-          <div class="row g-4">
-            <div class="col-md-4"><div class="d-flex align-items-start gap-3 h-100">
-              <i class="bi bi-thermometer-half accent fs-4 flex-shrink-0" aria-hidden="true"></i>
-              <p class="small fw-semibold mb-0">Gas furnace systems</p>
-            </div></div>
-            <div class="col-md-4"><div class="d-flex align-items-start gap-3 h-100">
-              <i class="bi bi-house-door accent fs-4 flex-shrink-0" aria-hidden="true"></i>
-              <p class="small fw-semibold mb-0">Mobile-home air conditioning</p>
-            </div></div>
-            <div class="col-md-4"><div class="d-flex align-items-start gap-3 h-100">
-              <i class="bi bi-shield-check accent fs-4 flex-shrink-0" aria-hidden="true"></i>
-              <p class="small fw-semibold mb-0">Manufacturer warranty claims<br><span class="fw-normal">Support for failed components</span></p>
-            </div></div>
+        <div class="service-specialties" aria-labelledby="specialties-title">
+          <h3 id="specialties-title">More ways to keep your space comfortable</h3>
+          <div class="specialties-grid">
+            <div class="specialty-item">
+              <i class="bi bi-thermometer-half" aria-hidden="true"></i>
+              <p>Gas furnace systems</p>
+            </div>
+            <div class="specialty-item">
+              <i class="bi bi-house-door" aria-hidden="true"></i>
+              <p>Mobile-home air conditioning</p>
+            </div>
+            <div class="specialty-item">
+              <i class="bi bi-shield-check" aria-hidden="true"></i>
+              <p>Manufacturer warranty claims<span>Support for failed components</span></p>
+            </div>
           </div>
         </div>
       </div>
@@ -299,20 +299,19 @@
   </main>
 
   <footer id="footer" class="footer position-relative">
-    <div class="container-fluid container-xxl footer-top d-flex flex-wrap align-items-center justify-content-between gap-3" style="padding-top: 24px;">
-      <a href="#page-top" class="logo d-flex align-items-center mb-0" aria-label="General HVAC LLC, back to top">
-        <img class="brand-logo" src="assets/img/general-hvac-logo.png" width="180" height="72" alt="General HVAC LLC" loading="lazy" decoding="async">
+    <div class="container footer-row">
+      <a href="#page-top" class="logo" aria-label="General HVAC LLC, back to top">
+        <img class="brand-logo" src="assets/img/general-hvac-logo.png" width="265" height="124" alt="General HVAC LLC" loading="lazy" decoding="async">
       </a>
-      <a href="https://www.facebook.com/TxAirConditioning/" class="d-inline-flex align-items-center justify-content-center fs-4" style="width: 44px; height: 44px;" target="_blank" rel="noopener" aria-label="General HVAC on Facebook">
+      <div class="footer-credit">
+        <span>© 2026 General HVAC LLC. All Rights Reserved.</span>
+        <span>Powered by <a href="https://farodigitalstudio.com" target="_blank" rel="noopener">Faro Digital Studio</a></span>
+      </div>
+      <a href="https://www.facebook.com/TxAirConditioning/" class="footer-facebook" target="_blank" rel="noopener" aria-label="General HVAC on Facebook">
         <i class="bi bi-facebook" aria-hidden="true"></i>
       </a>
     </div>
-    <div class="copyright text-center mt-4"><div class="container-fluid container-xxl">
-      <p>© <span>2026</span> <strong class="px-1 sitename">General HVAC LLC</strong> <span>All Rights Reserved</span><br>
-        Powered by <a href="https://farodigitalstudio.com" target="_blank" rel="noopener">Faro Digital Studio</a></p>
-    </div></div>
   </footer>
-  <a href="#page-top" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Back to top"><i class="bi bi-arrow-up-short" aria-hidden="true"></i></a>
   <!-- No preloader: content stays available if a vendor dependency fails. -->
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -324,7 +323,7 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
   <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js?v=20261027-repair3"></script>
 
   <!-- Accessibility bridge for unchanged template navigation behavior. -->
   <script>
